@@ -472,4 +472,20 @@ footer #footer__navigation ul li a:hover:after {
             flex-direction: row;
   }
 }
+
+.privacy-policy #hero {
+  margin: 6rem auto;
+  max-width: 600px;
+}
+
+.privacy-policy #hero h3 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.subpage article {
+  background: #fff;
+  font-size: .9rem;
+  padding: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
