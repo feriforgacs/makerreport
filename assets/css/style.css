@@ -275,14 +275,31 @@ header #navigation ul li a {
   color: #555;
   display: block;
   line-height: 40px;
+  position: relative;
   text-decoration: none;
   -webkit-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
 
+header #navigation ul li a:after {
+  background-color: #663FEF;
+  bottom: 0;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  width: 0;
+}
+
 header #navigation ul li a:hover {
   margin-top: -.1rem;
   opacity: .8;
+}
+
+header #navigation ul li a:hover:after {
+  width: 100%;
 }
 
 #hero {

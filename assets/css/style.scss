@@ -1,6 +1,8 @@
 @import "mixins/normalize";
 @import "mixins/buttons";
 
+$hoverAnimate: all 200ms ease-in-out;
+
 body{
   background-color: #f7f7f7;
   background-image: url(../images/background.png);
@@ -62,12 +64,28 @@ header{
           color: #555;
           display: block;
           line-height: 40px;
+          position: relative;
           text-decoration: none;
           transition: all 100ms ease-in;
+
+          &:after{
+            background-color: #663FEF;
+            bottom: 0;
+            content: "";
+            height: 5px;
+            left: 0;
+            position: absolute;
+            transition: $hoverAnimate;
+            width: 0;
+          }
 
           &:hover{
             margin-top: -.1rem;
             opacity: .8;
+
+            &:after{
+              width: 100%;
+            }
           }
         }
       }
@@ -134,7 +152,7 @@ header{
   body{
     font-size: 18px;
   }
-  
+
   header{
     #navigation{
       flex-direction: row;
