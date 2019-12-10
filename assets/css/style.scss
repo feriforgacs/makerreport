@@ -80,7 +80,6 @@ header{
           }
 
           &:hover{
-            margin-top: -.1rem;
             opacity: .8;
 
             &:after{
@@ -96,9 +95,8 @@ header{
 #hero{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
-  max-width: 400px;
+  margin: 3rem auto;
+  max-width: 500px;
 
   h1{
     font-family: 'Playfair Display', serif;
@@ -113,8 +111,8 @@ header{
   h3{
     color: #663FEF;
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin: -3rem 0 0;
+    font-size: 6rem;
+    margin: -4rem 0 0;
     padding: 0;
     text-align: center;
   }
@@ -128,8 +126,10 @@ header{
 
   &__body{
     background: #53FFDB;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .1);
     display: flex;
     flex-direction: column;
+    padding: 0 0 2rem;
     text-align: center;
     width: 100%;
 
@@ -139,11 +139,67 @@ header{
       margin: 1rem 0;
       padding: 0 2rem;
       text-align: left;
+
+      a{
+        color: #663FEF;
+        font-style: italic;
+        font-weight: bold;
+        position: relative;
+        text-decoration: none;
+      }
     }
 
     .info{
       font-size: .8rem;
       font-style: italic;
+    }
+  }
+}
+
+footer{
+  #footer__navigation{
+    ul{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      justify-content: center;
+      margin: 0 0 2rem;
+      padding: 0;
+
+      li{
+        margin: 0 2rem;
+        list-style: none;
+
+        a{
+          color: #555;
+          display: block;
+          font-size: .9rem;
+          line-height: 40px;
+          position: relative;
+          text-decoration: none;
+          transition: all 100ms ease-in;
+
+          &:after{
+            background-color: #53FFDB;
+            bottom: 0;
+            content: "";
+            height: 5px;
+            left: 0;
+            position: absolute;
+            transition: $hoverAnimate;
+            width: 0;
+          }
+
+          &:hover{
+            opacity: .8;
+
+            &:after{
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -160,6 +216,14 @@ header{
       .logo{
         flex-direction: row;
         margin: 1rem;
+      }
+    }
+  }
+
+  footer{
+    #footer__navigation{
+      ul{
+        flex-direction: row;
       }
     }
   }
