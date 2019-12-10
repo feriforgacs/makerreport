@@ -3,6 +3,11 @@
 
 $hoverAnimate: all 200ms ease-in-out;
 
+*::selection{
+  background-color: #663FEF;
+  color: #53FFDB;
+}
+
 body{
   background-color: #f7f7f7;
   background-image: url(../images/background.png);
