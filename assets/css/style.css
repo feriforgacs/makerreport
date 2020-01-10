@@ -488,4 +488,31 @@ footer #footer__navigation ul li a:hover:after {
   font-size: .9rem;
   padding: 2rem;
 }
+
+.tweet-list {
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.tweet-item {
+  background: #fff;
+  -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  line-height: 2rem;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+}
+
+.tweet-item__tweet {
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+
+.tweet-item__action {
+  color: #663FEF;
+  font-style: italic;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */

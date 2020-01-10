@@ -253,3 +253,29 @@ footer{
     padding: 2rem;
   }
 }
+
+.tweet-list{
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.tweet-item{
+  background: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  line-height: 2rem;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+
+  &__tweet{
+    margin: 0 auto 1rem;
+    padding: 0;
+  }
+
+  &__action{
+    color: #663FEF;
+    font-style: italic;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+  }
+}
