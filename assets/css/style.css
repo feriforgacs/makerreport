@@ -806,4 +806,38 @@ footer #footer__navigation ul li a:hover:after {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 1200px) {
+  .result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .result__navigation {
+    font-size: .8rem;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    margin-top: 1rem;
+  }
+  .result__navigation .navigation-toggle {
+    display: none;
+  }
+  .result__navigation ul {
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    display: block;
+  }
+  .result__content {
+    -webkit-box-flex: 75%;
+        -ms-flex: 75%;
+            flex: 75%;
+  }
+  .result__pagination {
+    font-size: .9rem;
+  }
+  .result__body {
+    padding: 2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

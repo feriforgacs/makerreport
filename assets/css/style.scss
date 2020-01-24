@@ -495,3 +495,37 @@ footer{
     font-weight: bold;
   }
 }
+
+@media only screen and (min-width: 1200px){
+  .result{
+    display: flex;
+
+    &__navigation{
+      font-size: .8rem;
+      flex: 25%;
+      margin-top: 1rem;
+
+      .navigation-toggle{
+        display: none;
+      }
+
+      ul{
+        border: 1px solid #d1d5da;
+        border-radius: 3px;
+        display: block;
+      }
+    }
+
+    &__content{
+      flex: 75%;
+    }
+
+    &__pagination{
+      font-size: .9rem;
+    }
+
+    &__body{
+      padding: 2rem;
+    }
+  }
+}
