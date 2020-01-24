@@ -715,9 +715,9 @@ footer #footer__navigation ul li a:hover:after {
           box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 1rem auto;
+  margin: 1rem;
   max-width: 1200px;
-  width: 100%;
+  width: calc(100% - 2rem);
 }
 
 .result__pagination {
@@ -790,16 +790,17 @@ footer #footer__navigation ul li a:hover:after {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 0 1rem;
 }
 
 .result__share .button:first-child {
   margin-left: 0;
-  margin-right: .5rem;
+  margin-right: 10px;
 }
 
 .result__share .button:last-child {
   margin-right: 0;
-  margin-left: .5rem;
+  margin-left: 10px;
 }
 
 .result .num {
@@ -829,6 +830,8 @@ footer #footer__navigation ul li a:hover:after {
     display: block;
   }
   .result__content {
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
     -webkit-box-flex: 75%;
         -ms-flex: 75%;
             flex: 75%;

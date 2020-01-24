@@ -413,9 +413,9 @@ footer{
     background: #fff;
     box-shadow: 0 0 100px rgba(0, 0, 0, .1);
     box-sizing: border-box;
-    margin: 1rem auto;
+    margin: 1rem;
     max-width: 1200px;
-    width: 100%;
+    width: calc(100% - 2rem);
   }
 
   &__pagination{
@@ -477,16 +477,17 @@ footer{
 
     .button{
       flex: 1;
+      padding: 0 1rem;
     }
 
     .button:first-child{
       margin-left: 0;
-      margin-right: .5rem;
+      margin-right: 10px;
     }
 
     .button:last-child{
       margin-right: 0;
-      margin-left: .5rem;
+      margin-left: 10px;
     }
   }
 
@@ -517,6 +518,8 @@ footer{
     }
 
     &__content{
+      border: 1px solid #d1d5da;
+      border-radius: 3px;
       flex: 75%;
     }
 
