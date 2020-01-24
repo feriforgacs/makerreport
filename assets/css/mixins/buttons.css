@@ -28,16 +28,27 @@
 }
 
 .button--tweet {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid #00aced;
   color: #00aced;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: .75rem;
   font-weight: bold;
   height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 40px;
 }
 
 .button--tweet svg {
   fill: #00aced;
+  margin-right: 1rem;
+  margin-top: -2px;
 }
 
 .button--tweet:hover {
@@ -50,16 +61,27 @@
 }
 
 .button--facebook {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid #3b5998;
   color: #3b5998;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: .75rem;
   font-weight: bold;
   height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 40px;
 }
 
 .button--facebook svg {
   fill: #3b5998;
+  margin-right: 1rem;
+  margin-top: -3px;
 }
 
 .button--facebook:hover {

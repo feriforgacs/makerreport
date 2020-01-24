@@ -286,7 +286,7 @@ footer{
     font-size: 5rem;
     line-height: 6rem;
     margin: 0;
-    padding: 2rem 0 1rem;
+    padding: 0 0 1rem;
     text-align: center;
     white-space: pre-line;
   }
@@ -295,7 +295,7 @@ footer{
     color: #663FEF;
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
-    margin: 0;
+    margin: 0 0 4rem;
     padding: 0;
     text-align: center;
 
@@ -319,12 +319,13 @@ footer{
     ul{
       display: none;
 
-      background: #f7f7f7;
+      background: #fff;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
-      border-bottom: 1px solid #ddd;
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #d1d5da;
+      border-left: 1px solid #d1d5da;
+      border-right: 1px solid #d1d5da;
+      box-shadow: 0 1px 1px rgba(27, 31, 35, .1);
       box-sizing: border-box;
       list-style-type: none;
       margin: 0 1rem 2rem;
@@ -361,9 +362,10 @@ footer{
     }
 
     .navigation-toggle{
-      background: #f7f7f7;
-      border: 1px solid #ddd;
+      background: #f6f8fa;
+      border: 1px solid #d1d5da;
       border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(27, 31, 35, .1);
       box-sizing: border-box;
       color: #666;
       cursor: pointer;
@@ -405,5 +407,91 @@ footer{
         display: none;
       }
     }
+  }
+
+  &__content{
+    background: #fff;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    margin: 1rem auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  &__pagination{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    justify-content: space-between;
+
+    a{
+      color: #663FEF;
+      padding: 0 1rem;
+      text-decoration: none;
+
+      &:hover{
+        opacity: .8;
+      }
+    }
+
+    &:first-child{
+      border-bottom: 1px solid #eee;
+    }
+
+    &:last-child{
+      border-top: 1px solid #eee;
+    }
+  }
+
+  &__body{
+    padding: 1rem;
+
+    h1{
+      color: #333;
+      font-family: 'Playfair Display', serif;
+      line-height: 150%;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2{
+      color: #555;
+    }
+
+    li{
+      margin-bottom: .5rem;
+    }
+
+    #chart-container{
+      border: 1px solid #eee;
+      border-radius: 3px;
+      margin: 2rem auto;
+      padding: .5rem;
+    }
+  }
+
+  &__share{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .button{
+      flex: 1;
+    }
+
+    .button:first-child{
+      margin-left: 0;
+      margin-right: .5rem;
+    }
+
+    .button:last-child{
+      margin-right: 0;
+      margin-left: .5rem;
+    }
+  }
+
+  .num{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
   }
 }
