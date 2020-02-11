@@ -481,7 +481,8 @@ footer{
   &__share{
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
 
     .button{
       flex: 1;
@@ -552,4 +553,10 @@ footer{
       padding: 2rem;
     }
   }
+}
+
+.separator{
+  background: #eee;
+  height: 1px;
+  margin: 3rem auto;
 }

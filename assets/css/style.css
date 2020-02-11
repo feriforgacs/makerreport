@@ -791,7 +791,8 @@ footer #footer__navigation ul li a:hover:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
 }
 
 .result__share .button {
@@ -859,5 +860,11 @@ footer #footer__navigation ul li a:hover:after {
   .result__body {
     padding: 2rem;
   }
+}
+
+.separator {
+  background: #eee;
+  height: 1px;
+  margin: 3rem auto;
 }
 /*# sourceMappingURL=style.css.map */
