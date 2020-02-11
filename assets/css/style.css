@@ -732,13 +732,17 @@ footer #footer__navigation ul li a:hover:after {
 }
 
 .result__pagination a {
-  color: #663FEF;
+  color: #888;
   padding: 0 1rem;
   text-decoration: none;
 }
 
 .result__pagination a:hover {
   opacity: .8;
+}
+
+.result__pagination a strong {
+  color: #663FEF;
 }
 
 .result__pagination:first-child {
@@ -751,6 +755,10 @@ footer #footer__navigation ul li a:hover:after {
 
 .result__body {
   padding: 1rem;
+}
+
+.result__body p {
+  line-height: 200%;
 }
 
 .result__body h1 {
@@ -806,6 +814,15 @@ footer #footer__navigation ul li a:hover:after {
 .result .num {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
+}
+
+.results {
+  background: #fff6d2;
+}
+
+.results header #navigation .logo {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (min-width: 1200px) {

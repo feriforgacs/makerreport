@@ -425,12 +425,16 @@ footer{
     justify-content: space-between;
 
     a{
-      color: #663FEF;
+      color: #888;
       padding: 0 1rem;
       text-decoration: none;
 
       &:hover{
         opacity: .8;
+      }
+
+      strong{
+        color: #663FEF;
       }
     }
 
@@ -445,6 +449,10 @@ footer{
 
   &__body{
     padding: 1rem;
+
+    p{
+      line-height: 200%;
+    }
 
     h1{
       color: #333;
@@ -494,6 +502,19 @@ footer{
   .num{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+  }
+}
+
+.results{
+  background: #fff6d2;
+
+  header{
+    #navigation{
+      .logo{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
 
