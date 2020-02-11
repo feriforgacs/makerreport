@@ -501,7 +501,7 @@ footer{
   }
 
   .num{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Old Standard TT', serif;
     font-weight: bold;
   }
 }
@@ -559,4 +559,13 @@ footer{
   background: #eee;
   height: 1px;
   margin: 3rem auto;
+}
+
+blockquote{
+  color: #888;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  width: 90%;
 }

@@ -9,6 +9,7 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body class="subpage results">
@@ -64,23 +65,152 @@
           <div class="result__body">
             <p><span class="num">23%</span> of makers started their journey a year ago, and more than <span class="num">20%</span> are on this path for more than <span class="num">5</span> years now.</p>
 
+            <blockquote>Q: How long have you been a maker?</blockquote>
+
+            <div id="chart-container--maker-years">
+              <canvas id="chart-maker-years"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
             <p>Home is the most popular place for makers to deep dive into their ideas, almost <span class="num">90%</span> of them.</p>
 
             <p>Coworking spaces (<span class="num">24%</span>), offices (<span class="num">30.8%</span>) and coffee shops (<span class="num">20.2%</span>) are the next and most  popular locations on the list. A steady <span class="num">6.7%</span> chooses the silence of libraries and for someone, the sauna is the place where ideas thrive.</p>
 
+            <div id="chart-container--working-from">
+              <canvas id="chart-working-from"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
             <p>Nearly <span class="num">64%</span> of respondents work on Mac, almost <span class="num">38%</span> on Windows and a little over <span class="num">18%</span> on Linux.</p>
+
+            <div id="chart-container--os">
+              <canvas id="chart-os"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
 
             <p>The average maker has built <span class="num">4</span> products during their career with almost <span class="num">6%</span> still working on their first projects. Nearly <span class="num">12%</span> of makers have built more than <span class="num">10</span> products.</p>
 
-            <p>More than <span class="num">87%</span> of makers took the step and publicly launched at least <span class="num">1</span> product. <span class="num">44%</span> of them launched between <span class="num">1</span> to <span class="num">2</span> products, also <span class="num">44%</span> between <span class="num">3</span> to <span class="num">5</span>, almost <span class="num">9%</span> between <span class="num">6</span> to <span class="num">10</span>, and nearly <span class="num">3%</span> launched more than <span class="num">10</span> products.</p>
+            <div id="chart-container--product-built">
+              <canvas id="chart-product-built"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
+            <p>More than <span class="num">87%</span> of makers took the step and publicly launched at least <span class="num">1</span> product. <span class="num">44%</span> of them launched between <span class="num">1</span> to <span class="num">2</span> products, <span class="num">33%</span> between <span class="num">3</span> to <span class="num">5</span>, almost <span class="num">9%</span> between <span class="num">6</span> to <span class="num">10</span>, and nearly <span class="num">3%</span> launched more than <span class="num">10</span> products.</p>
+
+            <div id="chart-container--product-launched">
+              <canvas id="chart-product-launched"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
 
             <p>Most makers (<span class="num">43.7%</span>) launched <span class="num">1</span> product in the past <span class="num">12</span> months, <span class="num">24.3%</span> launched <span class="num">2</span>, <span class="num">12.6%</span> launched more than <span class="num">2</span> products.</p>
 
-            <p><span class="num">9</span> were the most products launched in the past <span class="num">12</span> months.</p>
+            <p><span class="num">8</span> were the most products launched in the past <span class="num">12</span> months.</p>
+
+            <div id="chart-container--product-launched-last-year">
+              <canvas id="chart-product-launched-last-year"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
 
             <p><span class="num">50%</span> of makers spend less than <span class="num">3</span> months building an MVP ready to launch, while <span class="num">13.5%</span> are spending more than <span class="num">6</span> months on it.</p>
 
+            <blockquote>Q: On average, how much time do you spend building a product (the MVP) before launching it?</blockquote>
+
+            <div id="chart-container--mvp">
+              <canvas id="chart-mvp"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
             <p><span class="num">63.5%</span> develop their products by themselves, almost <span class="num">7%</span> use only no-code tools, and <span class="num">21.2%</span> use the tools of both worlds.</p>
+
+            <div id="chart-container--code-nocode">
+              <canvas id="chart-code-nocode"></canvas>
+            </div>
+
+            <blockquote>Q: How do you build your products?</blockquote>
 
             <div class="result__share">
               <a href="" class="button button--tweet">
@@ -101,8 +231,6 @@
         </div><!-- end .result__content -->
       </div><!-- end .result -->
 
-      
-
       <footer>
         <nav id="footer__navigation">
           <ul>
@@ -118,36 +246,459 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   <script>
-    var ctx = document.getElementById('chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
+    /**
+     * Maker years chart
+     */
+    var makerYearsChartCtx = document.getElementById('chart-maker-years').getContext('2d');
+    var makerYearsChart = new Chart(makerYearsChartCtx, {
+        type: 'pie',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['1 year or less', 'between 1 to 2 years', 'between 2 to 3 years', 'between 3 to 4 years', 'between 4 to 5 years', 'more than 5 years'],
             datasets: [{
-                label: 'Makers by Location',
-                data: [12, 19, 3, 5, 2, 3],
+                label: ['1 year or less', 'between 1 to 2 years', 'between 2 to 3 years', 'between 3 to 4 years', 'between 4 to 5 years', 'more than 5 years'],
+                data: [23.1, 23.1, 18.3, 7.7, 7.7, 20.2],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
         }
     });
+
+    /**
+     * Working from chart
+     */
+    var workingFromChartCtx = document.getElementById('chart-working-from').getContext('2d');
+    var workingFromChart = new Chart(workingFromChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['home', 'coworking space', 'office', 'coffee shop', 'library'],
+            datasets: [{
+                label: [''],
+                data: [88.5, 24, 30.8, 20.2, 6.7],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * OS chart
+     */
+    var osChartCtx = document.getElementById('chart-os').getContext('2d');
+    var osChart = new Chart(osChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['macOS', 'Windows', 'Linux'],
+            datasets: [{
+                label: [''],
+                data: [63.5, 37.5, 18.3],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
+        }
+    });
+  
+    /**
+     * Product built chart
+     */
+    var productBuiltChartCtx = document.getElementById('chart-product-built').getContext('2d');
+    var productBuiltChart = new Chart(productBuiltChartCtx, {
+        type: 'pie',
+        data: {
+            labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10+'],
+            datasets: [{
+                label: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10+'],
+                data: [5.8, 8.7, 13.6, 1, 10.7, 17.5, 12.6, 2.9, 1.9, 7.8, 5.8, 11.8],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Product launched chart
+     */
+    var productLaunchedChartCtx = document.getElementById('chart-product-launched').getContext('2d');
+    var productLaunchedChart = new Chart(productLaunchedChartCtx, {
+        type: 'pie',
+        data: {
+            labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10+'],
+            datasets: [{
+                label: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10+'],
+                data: [12.6, 22.3, 21.4, 12.6, 7.8, 11.7, 3.9, 1, 1, 0, 2.9, 3],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Product launched last year chart
+     */
+    var productLaunchedLastYearChartCtx = document.getElementById('chart-product-launched-last-year').getContext('2d');
+    var productLaunchedLastYearChart = new Chart(productLaunchedLastYearChartCtx, {
+        type: 'pie',
+        data: {
+            labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8'],
+            datasets: [{
+                label: ['0', '1', '2', '3', '4', '5', '6', '7', '8'],
+                data: [19.4, 43.7, 24.3, 6.8, 1.9, 1.9, 1, 0, 1],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * MVP chart
+     */
+    var mvpChartCtx = document.getElementById('chart-mvp').getContext('2d');
+    var mvpChart = new Chart(mvpChartCtx, {
+        type: 'pie',
+        data: {
+            labels: ['1 month or less', 'between 1 to 2 months', 'between 2 to 3 months', 'between 3 to 4 months', 'between 4 to 5 months', 'between 5 to 6 months', 'more than 6 months'],
+            datasets: [{
+                label: ['1 month or less', 'between 1 to 2 months', 'between 2 to 3 months', 'between 3 to 4 months', 'between 4 to 5 months', 'between 5 to 6 months', 'more than 6 months'],
+                data: [13.5, 36.5, 14.4, 12.5, 4.8, 4.8, 13.5],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Code nocode chart
+     */
+    var codeNocodeCtx = document.getElementById('chart-code-nocode').getContext('2d');
+    var codeNocode = new Chart(codeNocodeCtx, {
+        type: 'pie',
+        data: {
+            labels: ['I\'m using no-code tools to build them', 'I\'m developing them by myself', 'Both', 'Other'],
+            datasets: [{
+                label: ['I\'m using no-code tools to build them', 'I\'m developing them by myself', 'Both', 'Other'],
+                data: [6.7, 63.5, 21.2, 8.6],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          }
+        }
+    });
+
+  
   </script>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
 </body>
 </html>
