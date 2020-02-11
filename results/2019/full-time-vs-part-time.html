@@ -64,7 +64,11 @@
           <div class="result__body">
             <p>More than <span class="num">30%</span> of makers work full time on their own projects or products.</p>
 
-            <p>Over <span class="num">62%</span> of makers work on their tasks next to their 9 to 5 and part-time jobs, or freelance projects and more than <span class="num">4%</span> of respondents are students.</p>
+            <p>Over <span class="num">60%</span> of makers work on their tasks next to their 9 to 5 and part-time jobs, or freelance projects and more than <span class="num">4%</span> of respondents are students.</p>
+
+            <div id="chart-container--full-part">
+              <canvas id="chart-full-part"></canvas>
+            </div>
 
             <div class="result__share">
               <a href="" class="button button--tweet">
@@ -102,36 +106,54 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   <script>
-    var ctx = document.getElementById('chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
+    /**
+     * Age chart
+     */
+    var fullPartChartCtx = document.getElementById('chart-full-part').getContext('2d');
+    var fullPartChart = new Chart(fullPartChartCtx, {
+        type: 'pie',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['full-time maker, working on my own projects full-time', 'part-time maker who is also working on freelance projects', 'part-time maker who has a 9 to 5 job', 'part-time maker who has a part-time job', 'other'],
             datasets: [{
-                label: 'Makers by Location',
-                data: [12, 19, 3, 5, 2, 3],
+                label: ['full-time maker, working on my own products/projects full-time', 'part-time maker who is also working on freelance projects', 'part-time maker who has a 9 to 5 job', 'part-time maker who has a part-time job', 'other'],
+                data: [32.1, 12.6, 39.8, 7.8, 7.7],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
+        },
+        options:{
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} ${currentValue}%`;
+              }
+            }
+          }
         }
     });
   </script>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
 </body>
 </html>
