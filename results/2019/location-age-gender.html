@@ -136,7 +136,7 @@
         data: {
             labels: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
             datasets: [{
-                label: 'Age',
+                label: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
                 data: [2.9, 11.7, 29.1, 27.2, 20.4, 3.9, 4.9],
                 backgroundColor: [
                     '#dc3912',
@@ -167,9 +167,10 @@
                 var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
                   return previousValue + currentValue;
                 });
+                var dataLabel = dataset.label[tooltipItem.index];
                 var currentValue = dataset.data[tooltipItem.index];
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                return currentValue + "%";
+                return `${dataLabel} (${currentValue}%)`;
               }
             }
           }
@@ -185,7 +186,7 @@
         data: {
             labels: ['Female', 'Male', 'Prefer not to say', 'Agender'],
             datasets: [{
-                label: 'Gender',
+                label: ['Female', 'Male', 'Prefer not to say', 'Agender'],
                 data: [15.5, 81.6, 1.9, 1],
                 backgroundColor: [
                     '#dc3912',
@@ -210,9 +211,10 @@
                 var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
                   return previousValue + currentValue;
                 });
+                var dataLabel = dataset.label[tooltipItem.index];
                 var currentValue = dataset.data[tooltipItem.index];
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                return currentValue + "%";
+                return `${dataLabel} (${currentValue}%)`;
               }
             }
           }
