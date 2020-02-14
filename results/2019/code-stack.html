@@ -73,6 +73,25 @@
               <li>Python (<span class="num">26.8%</span>)</li>
             </ul>
 
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
+
+            <div id="chart-container--programming-languages">
+              <canvas id="chart-programming-languages"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
             <p>And the most popular frameworks are:</p>
 
             <ul>
@@ -82,6 +101,12 @@
               <li>Vue.js (<span class="num">29.3%</span>)</li>
               <li>Express (<span class="num">21.7%</span>)</li>
             </ul>
+
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
+
+            <div id="chart-container--frameworks">
+              <canvas id="chart-frameworks"></canvas>
+            </div>
 
             <div class="result__share">
               <a href="" class="button button--tweet">
@@ -119,36 +144,157 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   <script>
-    var ctx = document.getElementById('chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
+    /**
+     * Programming languages chart
+     */
+    var programmingLanguagesChartCtx = document.getElementById('chart-programming-languages').getContext('2d');
+    var programmingLanguagesChart = new Chart(programmingLanguagesChartCtx, {
+        type: 'horizontalBar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['C#', 'C++', 'Go', 'HTML/CSS', 'Java', 'JavaScript', 'Kotlin', 'PHP', 'Python', 'SQL', 'Ruby', 'Swift', 'TypeScript', 'Other'],
             datasets: [{
-                label: 'Makers by Location',
-                data: [12, 19, 3, 5, 2, 3],
+                label: [''],
+                data: [4.1, 5.2, 8.2, 84.5, 10.3, 81.4, 8.2, 42.3, 26.8, 45.4, 13.4, 10.3, 18.6, 8],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef',
+                  '#5eba7d',
+                  '#0095ff'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
+        },
+        options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
+        }
+    });
+  
+    /**
+     * Frameworks chart
+     */
+    var frameworksChartCtx = document.getElementById('chart-frameworks').getContext('2d');
+    var frameworksChart = new Chart(frameworksChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['Angular/Angular.js', 'ASP.NET', 'Django', 'Express', 'jQuery', 'Laravel', 'Node.js', 'React.js', 'React Native', 'Ruby on Rails', 'Vue.js', 'Flask', 'Other'],
+            datasets: [{
+                label: [''],
+                data: [13, 2.2, 9.8, 21.7, 34.8, 14.1, 46.7, 40.2, 10.9, 14.1, 29.3, 3.3, 9],
+                backgroundColor: [
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef',
+                  '#5eba7d',
+                  '#0095ff'
+                ],
+                borderColor: [
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
         }
     });
   </script>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
 </body>
 </html>
