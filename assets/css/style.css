@@ -895,4 +895,8 @@ blockquote {
   text-align: center;
   width: 20px;
 }
+
+.img-responsive {
+  max-width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
