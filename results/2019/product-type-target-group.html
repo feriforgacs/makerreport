@@ -65,7 +65,34 @@
           <div class="result__body">
             <p>Web-based apps are the most popular (<span class="num">89.4%</span>) product type among makers. <span class="num">38.5%</span> work on mobile apps, <span class="num">9.6%</span> create ebooks and another <span class="num">9.6%</span>, courses.</p>
 
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
+
+            <blockquote>Q: What kind of products are you making?</blockquote>
+
+            <div id="chart-container--product-type">
+              <canvas id="chart-product-type"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
             <p>The target audience of their products is mainly B2C (<span class="num">81.6%</span>) but with B2B not so far behind (<span class="num">59.2%</span>).</p>
+
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
+
+            <div id="chart-container--target-audience">
+              <canvas id="chart-target-audience"></canvas>
+            </div>
 
             <div class="result__share">
               <a href="" class="button button--tweet">
@@ -86,8 +113,6 @@
         </div><!-- end .result__content -->
       </div><!-- end .result -->
 
-      
-
       <footer>
         <nav id="footer__navigation">
           <ul>
@@ -103,36 +128,149 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   <script>
-    var ctx = document.getElementById('chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
+    /**
+     * Product type chart
+     */
+    var productTypeChartCtx = document.getElementById('chart-product-type').getContext('2d');
+    var productTypeChart = new Chart(productTypeChartCtx, {
+        type: 'horizontalBar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['Web based apps', 'Mobile apps', 'Ebooks', 'Audio, Music', 'Video', 'Graphics, Digital art', 'Courses', 'Other'],
             datasets: [{
-                label: 'Makers by Location',
-                data: [12, 19, 3, 5, 2, 3],
+                label: [''],
+                data: [89.4, 38.5, 9.6, 3.8, 1.9, 5.8, 9.6, 9],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
+        },
+        options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Target audience chart
+     */
+    var targetAudienceChartCtx = document.getElementById('chart-target-audience').getContext('2d');
+    var targetAudienceChart = new Chart(targetAudienceChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['B2B', 'B2C', 'Other'],
+            datasets: [{
+                label: [''],
+                data: [59.2, 81.6, 3],
+                backgroundColor: [
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef'
+                ],
+                borderColor: [
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          }
         }
     });
   </script>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
 </body>
 </html>
