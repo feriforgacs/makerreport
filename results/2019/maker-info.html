@@ -206,11 +206,11 @@
 
             <p><span class="num">63.5%</span> develop their products by themselves, almost <span class="num">7%</span> use only no-code tools, and <span class="num">21.2%</span> use the tools of both worlds.</p>
 
+            <blockquote>Q: How do you build your products?</blockquote>
+
             <div id="chart-container--code-nocode">
               <canvas id="chart-code-nocode"></canvas>
             </div>
-
-            <blockquote>Q: How do you build your products?</blockquote>
 
             <div class="result__share">
               <a href="" class="button button--tweet">
@@ -324,6 +324,13 @@
             }]
         },
         options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
           legend:{
             display: false
           },
@@ -370,6 +377,13 @@
             }]
         },
         options:{
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
           legend:{
             display: false
           },
