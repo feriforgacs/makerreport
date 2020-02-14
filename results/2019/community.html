@@ -65,6 +65,12 @@
           <div class="result__body">
             <p>More than <span class="num">85%</span> of responders are part of a maker community and almost <span class="num">59%</span> of them are active in one or more. <span class="num">35.9%</span> of all makers are in read-only mode in their communities and <span class="num">13.6%</span> of them don’t hold a membership anywhere even though they want to.</p>
 
+            <blockquote>Are you a member of any maker community?</blockquote>
+
+            <div id="chart-container--community">
+              <canvas id="chart-community"></canvas>
+            </div>
+
             <div class="result__share">
               <a href="" class="button button--tweet">
                 <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
@@ -99,36 +105,68 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   <script>
-    var ctx = document.getElementById('chart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: 'Makers by Location',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
+    /**
+     * Community chart
+     */
+    var communityChartCtx = document.getElementById('chart-community').getContext('2d');
+    var communityChart = new Chart(communityChartCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Yes, but I\'m in "read only" mode in mostcases.', 'Yes, I am an active member of onemaker community.', 'Yes, I am an active member of multiplemaker communities.', 'No, but I want to.', 'No, and I don\'t want to.'],
+        datasets: [{
+          label: ['Yes, but I\'m in "read only" mode in mostcases.', 'Yes, I am an active member of onemaker community.', 'Yes, I am an active member of multiplemaker communities.', 'No, but I want to.', 'No, and I don\'t want to.'],
+          data: [35.9, 24.3, 25.2, 13.6, 1],
+          backgroundColor: [
+            '#dc3912',
+            '#ff9900',
+            '#109618',
+            '#990099',
+            '#0099c6',
+            '#dd4477',
+            '#b82e2e',
+            '#316395',
+            '#994499',
+            '#22aa99',
+            '#aaaa11',
+            '#663fef'
+          ],
+          borderColor: [
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff',
+            '#ffffff'
+          ],
+          borderWidth: 2
+        }]
+      },
+      options:{
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              var dataset = data.datasets[tooltipItem.datasetIndex];
+              var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                return previousValue + currentValue;
+              });
+
+              var dataLabel = dataset.label[tooltipItem.index];
+              var currentValue = dataset.data[tooltipItem.index];
+              // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+              return `${dataLabel} (${currentValue}%)`;
+            }
+          }
         }
+      }
     });
   </script>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
 </body>
 </html>
