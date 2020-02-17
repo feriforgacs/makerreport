@@ -114,7 +114,7 @@
 
             <p><span class="num">7.1%</span> of no-coders are currently learning how to code, and <span class="num">4%</span> of no-code makers think they would do the same if that was necessary to build what they wanted to.</p>
 
-            <p><span class="num">4%</span> of makers don't think that learning to code is essetinal to build what they want to.</p>
+            <p><span class="num">4%</span> of makers don't think that learning to code is essential to build what they want to.</p>
 
             <blockquote>Q: Would you learn to code to build products?</blockquote>
 
@@ -157,6 +157,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
   <script>
     /**
      * Nocode tools chart
@@ -289,6 +290,16 @@
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${dataLabel} (${currentValue}%)`;
               }
+            }
+          },
+          plugins: {
+            labels: {
+              precision: 1,
+              showZero: false,
+              fontSize: 10,
+              fontColor: '#fff',
+              overlap: true,
+              position: 'border',
             }
           }
         }

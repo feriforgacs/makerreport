@@ -154,6 +154,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
   <script>
     /**
      * Age chart
@@ -162,30 +163,30 @@
     var ageChart = new Chart(ageChartCtx, {
         type: 'pie',
         data: {
-            labels: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
-            datasets: [{
-                label: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
-                data: [2.9, 11.7, 29.1, 27.2, 20.4, 3.9, 4.9],
-                backgroundColor: [
-                    '#dc3912',
-                    '#ff9900',
-                    '#109618',
-                    '#990099',
-                    '#0099c6',
-                    '#dd4477',
-                    '#66aa00'
-                ],
-                borderColor: [
-                    '#ffffff',
-                    '#ffffff',
-                    '#ffffff',
-                    '#ffffff',
-                    '#ffffff',
-                    '#ffffff',
-                    '#ffffff'
-                ],
-                borderWidth: 2
-            }]
+          labels: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
+          datasets: [{
+            label: ['15-18', '19-23', '24-28', '29-33', '34-38', '39-43', '43+'],
+            data: [2.9, 11.7, 29.1, 27.2, 20.4, 3.9, 4.9],
+            backgroundColor: [
+              '#dc3912',
+              '#ff9900',
+              '#109618',
+              '#990099',
+              '#0099c6',
+              '#dd4477',
+              '#66aa00'
+            ],
+            borderColor: [
+              '#ffffff',
+              '#ffffff',
+              '#ffffff',
+              '#ffffff',
+              '#ffffff',
+              '#ffffff',
+              '#ffffff'
+            ],
+            borderWidth: 2
+          }]
         },
         options:{
           responsive: true,
@@ -202,6 +203,16 @@
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${dataLabel} (${currentValue}%)`;
               }
+            }
+          },
+          plugins: {
+            labels: {
+              precision: 1,
+              showZero: false,
+              fontSize: 10,
+              fontColor: '#fff',
+              overlap: true,
+              position: 'border',
             }
           }
         }
@@ -248,6 +259,16 @@
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${dataLabel} (${currentValue}%)`;
               }
+            }
+          },
+          plugins: {
+            labels: {
+              precision: 1,
+              showZero: false,
+              fontSize: 10,
+              fontColor: '#fff',
+              overlap: true,
+              position: 'border',
             }
           }
         }

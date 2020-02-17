@@ -90,7 +90,7 @@
           </div><!-- end .result__pagination -->
 
           <div class="result__body">
-            <h1>Full-time vs. part time</h1>
+            <h1>Full-time vs. part-time</h1>
             <p>More than <span class="num">30%</span> of makers work full time on their own projects or products.</p>
 
             <p>Over <span class="num">60%</span> of makers work on their tasks next to their 9 to 5 and part-time jobs, or freelance projects and more than <span class="num">4%</span> of respondents are students.</p>
@@ -134,6 +134,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
   <script>
     /**
      * Full-time vs. part-time chart
@@ -179,6 +180,16 @@
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${dataLabel} (${currentValue}%)`;
               }
+            }
+          },
+          plugins: {
+            labels: {
+              precision: 1,
+              showZero: false,
+              fontSize: 10,
+              fontColor: '#fff',
+              overlap: true,
+              position: 'border',
             }
           }
         }
