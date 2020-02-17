@@ -733,6 +733,7 @@ footer #footer__navigation ul li a:hover:after {
 
 .result__pagination a {
   color: #888;
+  font-size: .7rem;
   padding: 0 1rem;
   text-decoration: none;
 }
