@@ -70,7 +70,7 @@
             <p>Most makers fall in the 24-28 age range (<span class="num">29.1%</span>). There are also the rising talents, the 19-23-year-olds (<span class="num">11.7%</span>) and the 39+ group is pushing it close to <span class="num">10%</span>.</p>
 
             <div id="chart-container--age">
-              <canvas id="chart-age"></canvas>
+              <canvas id="chart-age" class="chart"></canvas>
             </div>
 
             <div class="result__share">
@@ -89,7 +89,7 @@
             <p>Gender-wise, The Maker Report responders consists of mostly men, with around <span class="num">80%</span> versus <span class="num">15.5%</span> of females.</p>
 
             <div id="chart-container--gender">
-              <canvas id="chart-gender"></canvas>
+              <canvas id="chart-gender" class="chart"></canvas>
             </div>
 
             <div class="result__share">
@@ -117,7 +117,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -161,6 +161,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -205,6 +207,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {

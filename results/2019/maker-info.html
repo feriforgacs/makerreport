@@ -68,7 +68,7 @@
             <blockquote>Q: How long have you been a maker?</blockquote>
 
             <div id="chart-container--maker-years">
-              <canvas id="chart-maker-years"></canvas>
+              <canvas class="chart" id="chart-maker-years"></canvas>
             </div>
 
             <div class="result__share">
@@ -91,7 +91,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--working-from">
-              <canvas id="chart-working-from"></canvas>
+              <canvas class="chart" id="chart-working-from"></canvas>
             </div>
 
             <div class="result__share">
@@ -112,7 +112,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--os">
-              <canvas id="chart-os"></canvas>
+              <canvas class="chart" id="chart-os"></canvas>
             </div>
 
             <div class="result__share">
@@ -131,7 +131,7 @@
             <p>The average maker has built <span class="num">4</span> products during their career with almost <span class="num">6%</span> still working on their first projects. Nearly <span class="num">12%</span> of makers have built more than <span class="num">10</span> products.</p>
 
             <div id="chart-container--product-built">
-              <canvas id="chart-product-built"></canvas>
+              <canvas class="chart" id="chart-product-built"></canvas>
             </div>
 
             <div class="result__share">
@@ -150,7 +150,7 @@
             <p>More than <span class="num">87%</span> of makers took the step and publicly launched at least <span class="num">1</span> product. <span class="num">44%</span> of them launched between <span class="num">1</span> to <span class="num">2</span> products, <span class="num">33%</span> between <span class="num">3</span> to <span class="num">5</span>, almost <span class="num">9%</span> between <span class="num">6</span> to <span class="num">10</span>, and nearly <span class="num">3%</span> launched more than <span class="num">10</span> products.</p>
 
             <div id="chart-container--product-launched">
-              <canvas id="chart-product-launched"></canvas>
+              <canvas class="chart" id="chart-product-launched"></canvas>
             </div>
 
             <div class="result__share">
@@ -171,7 +171,7 @@
             <p><span class="num">8</span> were the most products launched in the past <span class="num">12</span> months.</p>
 
             <div id="chart-container--product-launched-last-year">
-              <canvas id="chart-product-launched-last-year"></canvas>
+              <canvas class="chart" id="chart-product-launched-last-year"></canvas>
             </div>
 
             <div class="result__share">
@@ -192,7 +192,7 @@
             <blockquote>Q: On average, how much time do you spend building a product (the MVP) before launching it?</blockquote>
 
             <div id="chart-container--mvp">
-              <canvas id="chart-mvp"></canvas>
+              <canvas class="chart" id="chart-mvp"></canvas>
             </div>
 
             <div class="result__share">
@@ -213,7 +213,7 @@
             <blockquote>Q: How do you build your products?</blockquote>
 
             <div id="chart-container--code-nocode">
-              <canvas id="chart-code-nocode"></canvas>
+              <canvas class="chart" id="chart-code-nocode"></canvas>
             </div>
 
             <div class="result__share">
@@ -239,7 +239,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -281,6 +281,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -328,6 +330,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -381,6 +385,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -452,6 +458,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -513,6 +521,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -574,6 +584,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -635,6 +647,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -696,6 +710,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {

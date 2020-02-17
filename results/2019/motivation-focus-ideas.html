@@ -70,7 +70,7 @@
             <blockquote>It's hard for me to...</blockquote>
 
             <div id="chart-container--motivation-hard">
-              <canvas id="chart-motivation-hard"></canvas>
+              <canvas class="chart--tall" id="chart-motivation-hard"></canvas>
             </div>
 
             <div class="result__share">
@@ -93,7 +93,7 @@
             <blockquote>From these, the hardest is to...</blockquote>
 
             <div id="chart-container--motivation-hardest">
-              <canvas id="chart-motivation-hardest"></canvas>
+              <canvas class="chart" id="chart-motivation-hardest"></canvas>
             </div>
 
             <div class="result__share">
@@ -116,7 +116,7 @@
             <blockquote>It's easy for me to...</blockquote>
 
             <div id="chart-container--motivation-easy">
-              <canvas id="chart-motivation-easy"></canvas>
+              <canvas class="chart--tall" id="chart-motivation-easy"></canvas>
             </div>
 
             <div class="result__share">
@@ -137,7 +137,7 @@
             <blockquote>From these, the easiest is to...</blockquote>
 
             <div id="chart-container--motivation-easiest">
-              <canvas id="chart-motivation-easiest"></canvas>
+              <canvas class="chart" id="chart-motivation-easiest"></canvas>
             </div>
 
             <div class="result__share">
@@ -158,7 +158,7 @@
             <blockquote>I'm afraid of negative feedback before/after launching my product.</blockquote>
 
             <div id="chart-container--negative-feedback">
-              <canvas id="chart-negative-feedback"></canvas>
+              <canvas class="chart" id="chart-negative-feedback"></canvas>
             </div>
 
             <div class="result__share">
@@ -179,7 +179,7 @@
             <blockquote>Before publicly launching my products I ask for feedback from a smaller group of people.</blockquote>
 
             <div id="chart-container--ask-for-feedback">
-              <canvas id="chart-ask-for-feedback"></canvas>
+              <canvas class="chart" id="chart-ask-for-feedback"></canvas>
             </div>
 
             <div class="result__share">
@@ -207,7 +207,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -225,7 +225,7 @@
     var motivationHardChart = new Chart(motivationHardChartCtx, {
         type: 'horizontalBar',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product', 'Other'],
+            labels: ['stay motivated', 'stay focused', 'find ideas\n to work on', 'work only\n on one idea', 'launch my products\n (I\'m ready, \nbut afraid to launch)', 'get to the\n point when I can\n launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience\n of my product', 'Other'],
             datasets: [{
                 label: [''],
                 data: [23.3, 30.1, 13.6, 38.8, 20.4, 24.3, 8.7, 5.8, 57.3, 67, 5],
@@ -261,6 +261,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -286,7 +288,16 @@
               }
             }
           }
-        }
+        },
+        plugins: [{
+          beforeInit: function(chart) {
+              chart.data.labels.forEach(function(e, i, a) {
+                if (/\n/.test(e)) {
+                    a[i] = e.split(/\n/);
+                }
+              });
+          }
+        }]
     });
 
     /**
@@ -296,9 +307,9 @@
     var motivationHardestChart = new Chart(motivationHardestChartCtx, {
         type: 'pie',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
             datasets: [{
-                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
                 data: [6.9, 10.9, 4, 7.9, 4, 6.9, 2, 1, 25.7, 30.7],
                 backgroundColor: [
                   '#dc3912',
@@ -332,6 +343,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -357,7 +370,7 @@
     var motivationEasyChart = new Chart(motivationEasyChartCtx, {
         type: 'horizontalBar',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+            labels: ['stay motivated', 'stay focused', 'find ideas\n to work on', 'work only\n on one idea', 'launch my products\n (I\'m ready,\n but afraid to launch)', 'get to the point\n when I can launch\n my product', 'work alone', 'work in a team', 'find customers', 'grow the audience\n of my product'],
             datasets: [{
                 label: [''],
                 data: [52.5, 39.6, 53.5, 25.7, 24.8, 21.8, 59.4, 32.7, 9.9, 5],
@@ -393,6 +406,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -418,7 +433,16 @@
               }
             }
           }
-        }
+        },
+        plugins: [{
+          beforeInit: function(chart) {
+              chart.data.labels.forEach(function(e, i, a) {
+                if (/\n/.test(e)) {
+                    a[i] = e.split(/\n/);
+                }
+              });
+          }
+        }]
     });
   
     /**
@@ -428,9 +452,9 @@
     var motivationEasiestChart = new Chart(motivationEasiestChartCtx, {
         type: 'pie',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
             datasets: [{
-                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I canlaunch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
                 data: [17.7, 7.3, 31.3, 3.1, 4.2, 4.2, 22.9, 6.3, 0, 3.1],
                 backgroundColor: [
                   '#dc3912',
@@ -464,6 +488,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -525,6 +551,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
@@ -586,6 +614,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {

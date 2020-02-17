@@ -71,7 +71,7 @@
             <blockquote>The goal with my product(s) is to...</blockquote>
 
             <div id="chart-container--goals">
-              <canvas id="chart-goals"></canvas>
+              <canvas class="chart--tall" id="chart-goals"></canvas>
             </div>
 
             <div class="result__share">
@@ -99,7 +99,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -117,7 +117,7 @@
     var goalsChart = new Chart(goalsChartCtx, {
       type: 'horizontalBar',
       data: {
-        labels: ['learn and try new things', 'use them to get hired', 'make enough revenue that can cover my own expenses', 'grow them to a point where I can sell them', 'build a small company (10-20 employees)', 'build a company (20+ employees)', 'build a unicorn company', 'Other'],
+        labels: ['learn and\n try new things', 'use them\n to get hired', 'make enough revenue\n that can cover\n my own expenses', 'grow them to a point\n where I can sell them', 'build a small company\n (10-20 employees)', 'build a company\n (20+ employees)', 'build a unicorn company', 'Other'],
         datasets: [{
           label: [''],
           data: [62.1, 14.6, 71.8, 33, 47.6, 20.4, 14.6, 3],
@@ -153,6 +153,8 @@
         }]
       },
       options:{
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
           xAxes: [{
             ticks: {
@@ -178,7 +180,16 @@
             }
           }
         }
-      }
+      },
+      plugins: [{
+        beforeInit: function(chart) {
+            chart.data.labels.forEach(function(e, i, a) {
+              if (/\n/.test(e)) {
+                  a[i] = e.split(/\n/);
+              }
+            });
+        }
+      }]
     });
   </script>
 

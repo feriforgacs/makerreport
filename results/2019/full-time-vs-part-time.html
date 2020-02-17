@@ -68,7 +68,7 @@
             <p>Over <span class="num">60%</span> of makers work on their tasks next to their 9 to 5 and part-time jobs, or freelance projects and more than <span class="num">4%</span> of respondents are students.</p>
 
             <div id="chart-container--full-part">
-              <canvas id="chart-full-part"></canvas>
+              <canvas id="chart-full-part" class="chart"></canvas>
             </div>
 
             <div class="result__share">
@@ -96,7 +96,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -136,6 +136,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {

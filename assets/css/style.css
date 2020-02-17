@@ -584,7 +584,7 @@ footer #footer__navigation ul li a:hover:after {
 
 #result-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 6rem;
   margin: 0;
   padding: 0 0 1rem;
@@ -898,5 +898,13 @@ blockquote {
 
 .img-responsive {
   max-width: 100%;
+}
+
+.chart {
+  min-height: 400px;
+}
+
+.chart--tall {
+  min-height: 600px;
 }
 /*# sourceMappingURL=style.css.map */

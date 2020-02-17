@@ -76,7 +76,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--programming-languages">
-              <canvas id="chart-programming-languages"></canvas>
+              <canvas class="chart" id="chart-programming-languages"></canvas>
             </div>
 
             <div class="result__share">
@@ -105,7 +105,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--frameworks">
-              <canvas id="chart-frameworks"></canvas>
+              <canvas class="chart" id="chart-frameworks"></canvas>
             </div>
 
             <div class="result__share">
@@ -133,7 +133,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -191,6 +191,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -266,6 +268,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {

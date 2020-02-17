@@ -68,7 +68,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--design-stack">
-              <canvas id="chart-design-stack"></canvas>
+              <canvas class="chart" id="chart-design-stack"></canvas>
             </div>
 
             <div class="result__share">
@@ -96,7 +96,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -114,7 +114,7 @@
     var designStackChart = new Chart(designStackChartCtx, {
         type: 'horizontalBar',
         data: {
-            labels: ['I\'m creating the designs bymyself', 'I\'m using stock images, illustrations', 'I\'m working with designers, freelancers', 'Other'],
+            labels: ['I\'m creating\n the designs\n by myself', 'I\'m using\n stock images,\n illustrations', 'I\'m working with\n designers,\n freelancers', 'Other'],
             datasets: [{
                 label: [''],
                 data: [80.8, 53.8, 22.1, 3],
@@ -150,6 +150,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -175,7 +177,16 @@
               }
             }
           }
-        }
+        },
+        plugins: [{
+          beforeInit: function(chart) {
+              chart.data.labels.forEach(function(e, i, a) {
+                if (/\n/.test(e)) {
+                    a[i] = e.split(/\n/);
+                }
+              });
+          }
+        }]
     });
   </script>
 

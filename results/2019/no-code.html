@@ -68,7 +68,7 @@
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
             <div id="chart-container--nocode-tools">
-              <canvas id="chart-nocode-tools"></canvas>
+              <canvas class="chart" id="chart-nocode-tools"></canvas>
             </div>
 
             <div class="result__share">
@@ -91,7 +91,7 @@
             <blockquote>Q: Would you learn to code to build products?</blockquote>
 
             <div id="chart-container--learn-to-code">
-              <canvas id="chart-learn-to-code"></canvas>
+              <canvas class="chart" id="chart-learn-to-code"></canvas>
             </div>
 
             <div class="result__share">
@@ -119,7 +119,7 @@
         <nav id="footer__navigation">
           <ul>
             <li><a href="/contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
             <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
           </ul>
@@ -173,6 +173,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               ticks: {
@@ -244,6 +246,8 @@
             }]
         },
         options:{
+          responsive: true,
+          maintainAspectRatio: false,
           tooltips: {
             callbacks: {
               label: function(tooltipItem, data) {
