@@ -137,6 +137,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <script>
     /**
      * Goals chart
@@ -207,17 +208,19 @@
               return `${currentValue}%`;
             }
           }
-        }
-      },
-      plugins: [{
-        beforeInit: function(chart) {
-            chart.data.labels.forEach(function(e, i, a) {
-              if (/\n/.test(e)) {
-                  a[i] = e.split(/\n/);
+        },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
               }
-            });
-        }
-      }]
+            }
+          }
+      }
     });
   </script>
 

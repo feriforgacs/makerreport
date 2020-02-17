@@ -277,7 +277,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <script>
     /**
      * Maker years chart
@@ -328,13 +328,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }
@@ -395,6 +396,17 @@
                 return `${currentValue}%`;
               }
             }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
+            }
           }
         }
     });
@@ -448,6 +460,17 @@
                 var currentValue = dataset.data[tooltipItem.index];
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${currentValue}%`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
               }
             }
           }
@@ -515,13 +538,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }
@@ -588,13 +612,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }
@@ -661,13 +686,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }
@@ -734,13 +760,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }
@@ -807,13 +834,14 @@
             }
           },
           plugins: {
-            labels: {
-              precision: 1,
-              showZero: false,
-              fontSize: 10,
-              fontColor: '#fff',
-              overlap: true,
-              position: 'border',
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
             }
           }
         }

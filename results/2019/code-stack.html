@@ -171,6 +171,7 @@
   </div><!-- end #container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <script>
     /**
      * Programming languages chart
@@ -243,6 +244,17 @@
                 var currentValue = dataset.data[tooltipItem.index];
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${currentValue}%`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
               }
             }
           }
@@ -320,6 +332,17 @@
                 var currentValue = dataset.data[tooltipItem.index];
                 // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
                 return `${currentValue}%`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
               }
             }
           }
