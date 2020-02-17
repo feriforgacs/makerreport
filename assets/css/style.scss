@@ -281,9 +281,14 @@ footer{
 }
 
 #result-hero{
-  h1{
+  h3{
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
+
+    @media only screen and(min-width: 600px){
+      font-size: 5rem;
+    }
+
     line-height: 6rem;
     margin: 0;
     padding: 0 0 1rem;
@@ -414,7 +419,7 @@ footer{
     box-shadow: 0 0 100px rgba(0, 0, 0, .1);
     box-sizing: border-box;
     margin: 1rem;
-    max-width: 1200px;
+    max-width: 870px;
     width: calc(100% - 2rem);
   }
 
@@ -427,6 +432,11 @@ footer{
     a{
       color: #888;
       font-size: .7rem;
+
+      @media only screen and (min-width: 600px){
+        font-size: 1rem;
+      }
+
       padding: 0 1rem;
       text-decoration: none;
 
@@ -559,7 +569,11 @@ footer{
 .separator{
   background: #eee;
   height: 1px;
-  margin: 3rem auto;
+  margin: 2rem auto;
+
+  @media only screen and(min-width: 600px){
+    margin: 3rem auto;
+  }
 }
 
 blockquote{

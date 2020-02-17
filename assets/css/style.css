@@ -582,7 +582,7 @@ footer #footer__navigation ul li a:hover:after {
   text-decoration: none;
 }
 
-#result-hero h1 {
+#result-hero h3 {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   line-height: 6rem;
@@ -590,6 +590,12 @@ footer #footer__navigation ul li a:hover:after {
   padding: 0 0 1rem;
   text-align: center;
   white-space: pre-line;
+}
+
+@media only screen and (min-width: 600px) {
+  #result-hero h3 {
+    font-size: 5rem;
+  }
 }
 
 #result-hero h2 {
@@ -716,7 +722,7 @@ footer #footer__navigation ul li a:hover:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 1rem;
-  max-width: 1200px;
+  max-width: 870px;
   width: calc(100% - 2rem);
 }
 
@@ -736,6 +742,12 @@ footer #footer__navigation ul li a:hover:after {
   font-size: .7rem;
   padding: 0 1rem;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .result__pagination a {
+    font-size: 1rem;
+  }
 }
 
 .result__pagination a:hover {
@@ -866,7 +878,13 @@ footer #footer__navigation ul li a:hover:after {
 .separator {
   background: #eee;
   height: 1px;
-  margin: 3rem auto;
+  margin: 2rem auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .separator {
+    margin: 3rem auto;
+  }
 }
 
 blockquote {
