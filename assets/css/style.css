@@ -726,6 +726,10 @@ footer #footer__navigation ul li a:hover:after {
   width: calc(100% - 2rem);
 }
 
+.result__content--share {
+  margin: 0 auto;
+}
+
 .result__pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,6 +799,10 @@ footer #footer__navigation ul li a:hover:after {
   border-radius: 3px;
   margin: 2rem auto;
   padding: .5rem;
+}
+
+.result__body--share {
+  margin: 0 auto;
 }
 
 .result__share {
