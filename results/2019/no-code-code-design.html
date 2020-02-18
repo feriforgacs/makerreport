@@ -747,7 +747,16 @@
               }
             }
           }
-        }
+        },
+        plugins: [{
+          beforeInit: function(chart) {
+            chart.data.labels.forEach(function(e, i, a) {
+              if (/\n/.test(e)) {
+                  a[i] = e.split(/\n/);
+              }
+            });
+          },
+        }]
     });
 
   </script>
