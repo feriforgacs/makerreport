@@ -805,6 +805,16 @@ footer #footer__navigation ul li a:hover:after {
   margin: 0 auto;
 }
 
+.result__body a.link {
+  color: #663FEF;
+  text-decoration: underline;
+}
+
+.result__body a.link:hover {
+  color: #53FFDB;
+  opacity: .8;
+}
+
 .result__share {
   display: -webkit-box;
   display: -ms-flexbox;
