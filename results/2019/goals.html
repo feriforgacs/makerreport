@@ -71,9 +71,7 @@
             <li><a href="full-time-vs-part-time.html#result">Full-time vs. part-time</a></li>
             <li><a href="part-time-makers.html#result">Part-time makers</a></li>
             <li><a href="maker-info.html#result">Maker info</a></li>
-            <li><a href="no-code.html#result">No-code</a></li>
-            <li><a href="code-stack.html#result">Code stack</a></li>
-            <li><a href="design-stack.html#result">Design stack</a></li>
+            <li><a href="no-code-code-design.html#result">No-code, code, design</a></li>
             <li><a href="product-type-target-group.html#result">Product type, target group</a></li>
             <li><a href="motivation-focus-ideas.html#result">Motivation, focus, ideas</a></li>
             <li><a href="goals.html#result" class="active">Goals</a></li>
@@ -209,18 +207,27 @@
             }
           }
         },
-          plugins: {
-            datalabels: {
-              formatter: function(value) {
-                  return `${value}%`;
-              },
-              color: "#fff",
-              font: {
-                size: '10'
-              }
+        plugins: {
+          datalabels: {
+            formatter: function(value) {
+                return `${value}%`;
+            },
+            color: "#fff",
+            font: {
+              size: '10'
             }
           }
-      }
+        }
+      },
+      plugins: [{
+        beforeInit: function(chart) {
+          chart.data.labels.forEach(function(e, i, a) {
+            if (/\n/.test(e)) {
+                a[i] = e.split(/\n/);
+            }
+          });
+        },
+      }]
     });
   </script>
 

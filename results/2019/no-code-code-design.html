@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Motivation, focus, ideas - Results 2019 - The Maker Report</title>
-  <meta property="description" content="Growing the audience of their product(s) and finding new customers are the most challenging for most makers (67% and 57.3%), while almost 40% find it hard to work on only one idea.">
+  <title>No-code, code, design - Results 2019 - The Maker Report</title>
+  <meta property="description" content="63.5% develop their products by themselves, almost 7% use only no-code tools, and 21.2% use the tools of both worlds.">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -18,10 +18,10 @@
   <meta name="msapplication-config" content="assets/images/browserconfig.xml">
   <meta name="theme-color" content="#53ffdb">
 
-  <meta property="og:title" content="Motivation, focus, ideas - Results 2019 - The Maker Report">
+  <meta property="og:title" content="No-code, code, design - Results 2019 - The Maker Report">
   <meta property="og:site_name" content="themakerreport.com">
-  <meta property="og:url" content="https://themakerreport.com/results/2019/motivation-focus-ideas.html">
-  <meta property="og:description" content="Growing the audience of their product(s) and finding new customers are the most challenging for most makers (67% and 57.3%), while almost 40% find it hard to work on only one idea.">
+  <meta property="og:url" content="https://themakerreport.com/results/2019/no-code.html">
+  <meta property="og:description" content="63.5% develop their products by themselves, almost 7% use only no-code tools, and 21.2% use the tools of both worlds.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://themakerreport.com/assets/images/facebook-share-image.png">
   <meta property="og:image:width" content="1200">
@@ -29,8 +29,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@MakerReport">
-  <meta name="twitter:title" content="Motivation, focus, ideas - Results 2019 - The Maker Report">
-  <meta name="twitter:description" content="Growing the audience of their product(s) and finding new customers are the most challenging for most makers (67% and 57.3%), while almost 40% find it hard to work on only one idea.">
+  <meta name="twitter:title" content="No-code, code, design - Results 2019 - The Maker Report">
+  <meta name="twitter:description" content="63.5% develop their products by themselves, almost 7% use only no-code tools, and 21.2% use the tools of both worlds.">
   <meta name="twitter:image" content="https://themakerreport.com/assets/images/twitter-share-image.png">
   <meta name="twitter:image:alt" content="The Maker Report">
 
@@ -71,9 +71,9 @@
             <li><a href="full-time-vs-part-time.html#result">Full-time vs. part-time</a></li>
             <li><a href="part-time-makers.html#result">Part-time makers</a></li>
             <li><a href="maker-info.html#result">Maker info</a></li>
-            <li><a href="no-code-code-design.html#result">No-code, code, design</a></li>
+            <li><a href="no-code-code-design.html#result" class="active">No-code, code, design</a></li>
             <li><a href="product-type-target-group.html#result">Product type, target group</a></li>
-            <li><a href="motivation-focus-ideas.html#result" class="active">Motivation, focus, ideas</a></li>
+            <li><a href="motivation-focus-ideas.html#result">Motivation, focus, ideas</a></li>
             <li><a href="goals.html#result">Goals</a></li>
             <li><a href="revenue.html#result">Revenue</a></li>
             <li><a href="community.html#result">Community</a></li>
@@ -83,20 +83,40 @@
 
         <div class="result__content" id="result">
           <div class="result__pagination">
-            <a href="product-type-target-group.html#result">Prev: <strong>Product type, target group</strong></a>
-            <a href="goals.html#result">Next: <strong>Goals</strong></a>
+            <a href="maker-info.html#result">Prev: <strong>Maker info</strong></a>
+            <a href="product-type-target-group.html#result">Next: <strong>Product type, target group</strong></a>
           </div><!-- end .result__pagination -->
 
           <div class="result__body">
-            <h1>Motivation, focus, ideas</h1>
-            <p>Growing the audience of their product(s) and finding new customers are the most challenging for most makers (<span class="num">67%</span> and <span class="num">57.3%</span>), while almost <span class="num">40%</span> find it hard to work on only one idea. Staying focused is not easy for more than one quarter of respondents (<span class="num">30.1%</span>). Some makers may seem lonely wolves but the data shows otherwise: only <span class="num">5.8%</span> of them find it hard to work in a team. Almost <span class="num">33%</span> said it is in fact easy for them.</p>
+            <h1>No-code, code, design</h1>
+
+            <p><span class="num">63.5%</span> develop their products by themselves, almost <span class="num">7%</span> use only no-code tools, and <span class="num">21.2%</span> use the tools of both worlds.</p>
+
+            <blockquote>Q: How do you build your products?</blockquote>
+
+            <div id="chart-container--code-nocode">
+              <canvas class="chart" id="chart-code-nocode"></canvas>
+            </div>
+
+            <div class="result__share">
+              <a href="" class="button button--tweet">
+                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
+                <span>Tweet</span>
+              </a>
+              <a href="" class="button button--facebook">
+                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
+                <span>Share</span>
+              </a>
+            </div><!-- end .result__share -->
+
+            <div class="separator"></div>
+
+            <p>Stripe (<span class="num">59.2%</span>), Mailchimp (<span class="num">47.9%</span>), Google Forms (<span class="num">39.4%</span>), Google Sheets (<span class="num">39.4%</span>), WordPress (<span class="num">33.8%</span>) and Zapier (<span class="num">33.8%</span>) are the most popular no-code tools, followed by PayPal (<span class="num">32.4%</span>), Typeform (<span class="num">26.8%</span>) and Airtable (<span class="num">25.4%</span>).</p>
 
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
-            <blockquote>It's hard for me to...</blockquote>
-
-            <div id="chart-container--motivation-hard">
-              <canvas class="chart--tall" id="chart-motivation-hard"></canvas>
+            <div id="chart-container--nocode-tools">
+              <canvas class="chart" id="chart-nocode-tools"></canvas>
             </div>
 
             <div class="result__share">
@@ -112,14 +132,14 @@
 
             <div class="separator"></div>
 
-            <p>When asked about what is the hardest task, out of all, <span class="num">30.7%</span> of makers answered that it’s growing their audience, and <span class="num">25.7%</span> said it’s finding customers.</p>
+            <p><span class="num">7.1%</span> of no-coders are currently learning how to code, and <span class="num">4%</span> of no-code makers think they would do the same if that was necessary to build what they wanted to.</p>
 
-            <p><span class="num">4%</span> of makers are afraid to launch even though their products are ready to go.</p>
+            <p><span class="num">4%</span> of makers don't think that learning to code is essential to build what they want to.</p>
 
-            <blockquote>From these, the hardest is to...</blockquote>
+            <blockquote>Q: Would you learn to code to build products?</blockquote>
 
-            <div id="chart-container--motivation-hardest">
-              <canvas class="chart" id="chart-motivation-hardest"></canvas>
+            <div id="chart-container--learn-to-code">
+              <canvas class="chart" id="chart-learn-to-code"></canvas>
             </div>
 
             <div class="result__share">
@@ -135,14 +155,20 @@
 
             <div class="separator"></div>
 
-            <p>Working alone is easy for most makers (<span class="num">59.4%</span>), just like finding new ideas to work on (<span class="num">53.5%</span>) and staying motivated (<span class="num">52.5%</span>).</p>
+            <p>Among makers with developer skills, the top <span class="num">5</span> programming, scripting, markup languages are the following:</p>
+
+            <ul>
+              <li>HTML/CSS (<span class="num">84.5%</span>)</li>
+              <li>JavaScript (<span class="num">81.4%</span>)</li>
+              <li>SQL (<span class="num">45.4%</span>)</li>
+              <li>PHP (<span class="num">42.3%</span>)</li>
+              <li>Python (<span class="num">26.8%</span>)</li>
+            </ul>
 
             <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
-            <blockquote>It's easy for me to...</blockquote>
-
-            <div id="chart-container--motivation-easy">
-              <canvas class="chart--tall" id="chart-motivation-easy"></canvas>
+            <div id="chart-container--programming-languages">
+              <canvas class="chart" id="chart-programming-languages"></canvas>
             </div>
 
             <div class="result__share">
@@ -158,12 +184,20 @@
 
             <div class="separator"></div>
 
-            <p><span class="num">31.3%</span> of makers thrive when it comes to finding ideas to work on, and to doing it alone (<span class="num">22.9%</span>).</p>
+            <p>And the most popular frameworks are:</p>
 
-            <blockquote>From these, the easiest is to...</blockquote>
+            <ul>
+              <li>Node.js (<span class="num">46.7%</span>)</li>
+              <li>React.js (<span class="num">40.2%</span>)</li>
+              <li>jQuery (<span class="num">34.8%</span>)</li>
+              <li>Vue.js (<span class="num">29.3%</span>)</li>
+              <li>Express (<span class="num">21.7%</span>)</li>
+            </ul>
 
-            <div id="chart-container--motivation-easiest">
-              <canvas class="chart" id="chart-motivation-easiest"></canvas>
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
+
+            <div id="chart-container--frameworks">
+              <canvas class="chart" id="chart-frameworks"></canvas>
             </div>
 
             <div class="result__share">
@@ -179,12 +213,12 @@
 
             <div class="separator"></div>
 
-            <p>Almost <span class="num">7%</span> of makers are really afraid of negative feedback both before or after they launched their products, for <span class="num">71.6%</span> this is not a problem.</p>
+            <p>Most makers (<span class="num">80.8%</span>) choose to create the design for their products by themselves. <span class="num">53.8%</span> also use stock images and illustrations, while <span class="num">22.1%</span> are working with designers or freelancers.</p>
 
-            <blockquote>I'm afraid of negative feedback before/after launching my product.</blockquote>
+            <p class="question-info"><span>i</span> Responders could mark multiple options</p>
 
-            <div id="chart-container--negative-feedback">
-              <canvas class="chart" id="chart-negative-feedback"></canvas>
+            <div id="chart-container--design-stack">
+              <canvas class="chart" id="chart-design-stack"></canvas>
             </div>
 
             <div class="result__share">
@@ -198,36 +232,14 @@
               </a>
             </div><!-- end .result__share -->
 
-            <div class="separator"></div>
-
-            <p><span class="num">6.9%</span> of makers launch their products without asking for feedback from anyone, <span class="num">61.8%</span> are looking for feedback from some people every time, and <span class="num">31.4%</span> do it sometimes.</p>
-
-            <blockquote>Before publicly launching my products I ask for feedback from a smaller group of people.</blockquote>
-
-            <div id="chart-container--ask-for-feedback">
-              <canvas class="chart" id="chart-ask-for-feedback"></canvas>
-            </div>
-
-            <div class="result__share">
-              <a href="" class="button button--tweet">
-                <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M15.999 1.537a6.57 6.57 0 0 1-1.885.517A3.296 3.296 0 0 0 15.557.238a6.576 6.576 0 0 1-2.084.796A3.282 3.282 0 0 0 7.88 4.027 9.32 9.32 0 0 1 1.112.599 3.28 3.28 0 0 0 2.13 4.98a3.27 3.27 0 0 1-1.487-.41v.042a3.284 3.284 0 0 0 2.633 3.217 3.29 3.29 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28A6.587 6.587 0 0 1 0 11.523a9.29 9.29 0 0 0 5.032 1.475c6.038 0 9.34-5.001 9.34-9.338 0-.143-.004-.284-.01-.425a6.673 6.673 0 0 0 1.637-1.698H16z"></path></svg>
-                <span>Tweet</span>
-              </a>
-              <a href="" class="button button--facebook">
-                <svg width="8" height="13" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg"><path d="M7.2 2.323H5.923c-1.046 0-1.278.464-1.278 1.16V5.11h2.44l-.35 2.438h-2.09v6.387H2.09V7.548H0V5.11h2.09V3.252C2.09 1.162 3.368 0 5.342 0c.93 0 1.742.116 1.858.116v2.207z" fill-rule="evenodd"></path></svg>
-                <span>Share</span>
-              </a>
-            </div><!-- end .result__share -->
           </div>
 
           <div class="result__pagination">
-            <a href="product-type-target-group.html#result">Prev: <strong>Product type, target group</strong></a>
-            <a href="goals.html#result">Next: <strong>Goals</strong></a>
+            <a href="maker-info.html#result">Prev: <strong>Maker info</strong></a>
+            <a href="product-type-target-group.html#result">Next: <strong>Product type, target group</strong></a>
           </div><!-- end .result__pagination -->
         </div><!-- end .result__content -->
       </div><!-- end .result -->
-
-      
 
       <footer>
         <nav id="footer__navigation">
@@ -246,16 +258,90 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <script>
     /**
-     * Motivation hard chart
+     * Code nocode chart
      */
-    var motivationHardChartCtx = document.getElementById('chart-motivation-hard').getContext('2d');
-    var motivationHardChart = new Chart(motivationHardChartCtx, {
+    var codeNocodeCtx = document.getElementById('chart-code-nocode').getContext('2d');
+    var codeNocode = new Chart(codeNocodeCtx, {
+        type: 'pie',
+        data: {
+            labels: ['I\'m using no-code tools to build them', 'I\'m developing them by myself', 'Both', 'Other'],
+            datasets: [{
+                label: ['I\'m using no-code tools to build them', 'I\'m developing them by myself', 'Both', 'Other'],
+                data: [6.7, 63.5, 21.2, 8.6],
+                backgroundColor: [
+                    '#dc3912',
+                    '#ff9900',
+                    '#109618',
+                    '#990099',
+                    '#0099c6',
+                    '#dd4477',
+                    '#b82e2e',
+                    '#316395',
+                    '#994499',
+                    '#22aa99',
+                    '#aaaa11',
+                    '#663fef'
+                ],
+                borderColor: [
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff',
+                    '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          responsive: true,
+          maintainAspectRatio: false,
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Nocode tools chart
+     */
+    var nocodeToolsChartCtx = document.getElementById('chart-nocode-tools').getContext('2d');
+    var nocodeToolsChart = new Chart(nocodeToolsChartCtx, {
         type: 'horizontalBar',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas\n to work on', 'work only\n on one idea', 'launch my products\n (I\'m ready, \nbut afraid to launch)', 'get to the\n point when I can\n launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience\n of my product', 'Other'],
+            labels: ['Stripe', 'Mailchimp', 'Google Forms', 'Google Sheets', 'WordPress', 'Zapier', 'PayPal', 'Typeform', 'Airtable'],
             datasets: [{
                 label: [''],
-                data: [23.3, 30.1, 13.6, 38.8, 20.4, 24.3, 8.7, 5.8, 57.3, 67, 5],
+                data: [59.2, 47.9, 39.4, 39.4, 33.8, 33.8, 32.4, 26.8, 25.4],
                 backgroundColor: [
                   '#dc3912',
                   '#ff9900',
@@ -326,29 +412,20 @@
               }
             }
           }
-        },
-        plugins: [{
-          beforeInit: function(chart) {
-            chart.data.labels.forEach(function(e, i, a) {
-              if (/\n/.test(e)) {
-                  a[i] = e.split(/\n/);
-              }
-            });
-          },
-        }]
+        }
     });
-
+  
     /**
-     * Motivation hardets chart
+     * Learn to code chart
      */
-    var motivationHardestChartCtx = document.getElementById('chart-motivation-hardest').getContext('2d');
-    var motivationHardestChart = new Chart(motivationHardestChartCtx, {
+    var learnToCodeChartCtx = document.getElementById('chart-learn-to-code').getContext('2d');
+    var learnToCodeChart = new Chart(learnToCodeChartCtx, {
         type: 'pie',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
+            labels: ['I know how to code already', 'Yes, I\'m learning already', 'Yes, if that\'s necessary to build what Iwant to', 'Yes', 'No, I don\'t think that is necessary tobuild what I want to', 'No, I tried but it\'s not for me', 'No', 'I know how to code already, I\'m still learning more'],
             datasets: [{
-                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
-                data: [6.9, 10.9, 4, 7.9, 4, 6.9, 2, 1, 25.7, 30.7],
+                label: ['I know how to code already', 'Yes, I\'m learning already', 'Yes, if that\'s necessary to build what Iwant to', 'Yes', 'No, I don\'t think that is necessary tobuild what I want to', 'No, I tried but it\'s not for me', 'No', 'I know how to code already, I\'m still learning more'],
+                data: [73.7, 7.1, 4, 6.1, 4, 3, 1, 1],
                 backgroundColor: [
                   '#dc3912',
                   '#ff9900',
@@ -411,18 +488,194 @@
           }
         }
     });
-  
+
     /**
-     * Motivation easy chart
+     * Programming languages chart
      */
-    var motivationEasyChartCtx = document.getElementById('chart-motivation-easy').getContext('2d');
-    var motivationEasyChart = new Chart(motivationEasyChartCtx, {
+    var programmingLanguagesChartCtx = document.getElementById('chart-programming-languages').getContext('2d');
+    var programmingLanguagesChart = new Chart(programmingLanguagesChartCtx, {
         type: 'horizontalBar',
         data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas\n to work on', 'work only\n on one idea', 'launch my products\n (I\'m ready,\n but afraid to launch)', 'get to the point\n when I can launch\n my product', 'work alone', 'work in a team', 'find customers', 'grow the audience\n of my product'],
+            labels: ['C#', 'C++', 'Go', 'HTML/CSS', 'Java', 'JavaScript', 'Kotlin', 'PHP', 'Python', 'SQL', 'Ruby', 'Swift', 'TypeScript', 'Other'],
             datasets: [{
                 label: [''],
-                data: [52.5, 39.6, 53.5, 25.7, 24.8, 21.8, 59.4, 32.7, 9.9, 5],
+                data: [4.1, 5.2, 8.2, 84.5, 10.3, 81.4, 8.2, 42.3, 26.8, 45.4, 13.4, 10.3, 18.6, 8],
+                backgroundColor: [
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef',
+                  '#5eba7d',
+                  '#0095ff'
+                ],
+                borderColor: [
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
+            }
+          }
+        }
+    });
+  
+    /**
+     * Frameworks chart
+     */
+    var frameworksChartCtx = document.getElementById('chart-frameworks').getContext('2d');
+    var frameworksChart = new Chart(frameworksChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['Angular/Angular.js', 'ASP.NET', 'Django', 'Express', 'jQuery', 'Laravel', 'Node.js', 'React.js', 'React Native', 'Ruby on Rails', 'Vue.js', 'Flask', 'Other'],
+            datasets: [{
+                label: [''],
+                data: [13, 2.2, 9.8, 21.7, 34.8, 14.1, 46.7, 40.2, 10.9, 14.1, 29.3, 3.3, 9],
+                backgroundColor: [
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef',
+                  '#5eba7d',
+                  '#0095ff'
+                ],
+                borderColor: [
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            xAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          legend:{
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${currentValue}%`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
+            }
+          }
+        }
+    });
+
+    /**
+     * Design stack chart
+     */
+    var designStackChartCtx = document.getElementById('chart-design-stack').getContext('2d');
+    var designStackChart = new Chart(designStackChartCtx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['I\'m creating\n the designs\n by myself', 'I\'m using\n stock images,\n illustrations', 'I\'m working with\n designers,\n freelancers', 'Other'],
+            datasets: [{
+                label: [''],
+                data: [80.8, 53.8, 22.1, 3],
                 backgroundColor: [
                   '#dc3912',
                   '#ff9900',
@@ -493,240 +746,8 @@
               }
             }
           }
-        },
-        plugins: [{
-          beforeInit: function(chart) {
-            chart.data.labels.forEach(function(e, i, a) {
-              if (/\n/.test(e)) {
-                  a[i] = e.split(/\n/);
-              }
-            });
-          },
-        }]
-    });
-  
-    /**
-     * Motivation easiest chart
-     */
-    var motivationEasiestChartCtx = document.getElementById('chart-motivation-easiest').getContext('2d');
-    var motivationEasiestChart = new Chart(motivationEasiestChartCtx, {
-        type: 'pie',
-        data: {
-            labels: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
-            datasets: [{
-                label: ['stay motivated', 'stay focused', 'find ideas to work on', 'work only on one idea', 'launch my products (I\'m ready, but afraid to launch)', 'get to the point when I can launch my product', 'work alone', 'work in a team', 'find customers', 'grow the audience of my product'],
-                data: [17.7, 7.3, 31.3, 3.1, 4.2, 4.2, 22.9, 6.3, 0, 3.1],
-                backgroundColor: [
-                  '#dc3912',
-                  '#ff9900',
-                  '#109618',
-                  '#990099',
-                  '#0099c6',
-                  '#dd4477',
-                  '#b82e2e',
-                  '#316395',
-                  '#994499',
-                  '#22aa99',
-                  '#aaaa11',
-                  '#663fef'
-                ],
-                borderColor: [
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff'
-                ],
-                borderWidth: 2
-            }]
-        },
-        options:{
-          responsive: true,
-          maintainAspectRatio: false,
-          tooltips: {
-            callbacks: {
-              label: function(tooltipItem, data) {
-                var dataset = data.datasets[tooltipItem.datasetIndex];
-                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                  return previousValue + currentValue;
-                });
-
-                var dataLabel = dataset.label[tooltipItem.index];
-                var currentValue = dataset.data[tooltipItem.index];
-                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                return `${dataLabel} (${currentValue}%)`;
-              }
-            }
-          },
-          plugins: {
-            datalabels: {
-              formatter: function(value) {
-                  return `${value}%`;
-              },
-              color: "#fff",
-              font: {
-                size: '10'
-              }
-            }
-          }
         }
     });
-  
-    /**
-     * Negative feedback chart
-     */
-    var negativeFeedbackChartCtx = document.getElementById('chart-negative-feedback').getContext('2d');
-    var negativeFeedbackChart = new Chart(negativeFeedbackChartCtx, {
-        type: 'pie',
-        data: {
-            labels: ['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree'],
-            datasets: [{
-                label: ['Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree', 'Strongly agree'],
-                data: [21.6, 27.5, 22.5, 21.6, 6.9],
-                backgroundColor: [
-                  '#dc3912',
-                  '#ff9900',
-                  '#109618',
-                  '#990099',
-                  '#0099c6',
-                  '#dd4477',
-                  '#b82e2e',
-                  '#316395',
-                  '#994499',
-                  '#22aa99',
-                  '#aaaa11',
-                  '#663fef'
-                ],
-                borderColor: [
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff'
-                ],
-                borderWidth: 2
-            }]
-        },
-        options:{
-          responsive: true,
-          maintainAspectRatio: false,
-          tooltips: {
-            callbacks: {
-              label: function(tooltipItem, data) {
-                var dataset = data.datasets[tooltipItem.datasetIndex];
-                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                  return previousValue + currentValue;
-                });
-
-                var dataLabel = dataset.label[tooltipItem.index];
-                var currentValue = dataset.data[tooltipItem.index];
-                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                return `${dataLabel} (${currentValue}%)`;
-              }
-            }
-          },
-          plugins: {
-            datalabels: {
-              formatter: function(value) {
-                  return `${value}%`;
-              },
-              color: "#fff",
-              font: {
-                size: '10'
-              }
-            }
-          }
-        }
-    });
-  
-    /**
-     * Ask for feedback chart
-     */
-    var askForFeedbackChartCtx = document.getElementById('chart-ask-for-feedback').getContext('2d');
-    var askForFeedbackChart = new Chart(askForFeedbackChartCtx, {
-        type: 'pie',
-        data: {
-            labels: ['Yes', 'Sometimes', 'No'],
-            datasets: [{
-                label: ['Yes', 'Sometimes', 'No'],
-                data: [61.8, 31.4, 6.9],
-                backgroundColor: [
-                  '#dc3912',
-                  '#ff9900',
-                  '#109618',
-                  '#990099',
-                  '#0099c6',
-                  '#dd4477',
-                  '#b82e2e',
-                  '#316395',
-                  '#994499',
-                  '#22aa99',
-                  '#aaaa11',
-                  '#663fef'
-                ],
-                borderColor: [
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff',
-                  '#ffffff'
-                ],
-                borderWidth: 2
-            }]
-        },
-        options:{
-          responsive: true,
-          maintainAspectRatio: false,
-          tooltips: {
-            callbacks: {
-              label: function(tooltipItem, data) {
-                var dataset = data.datasets[tooltipItem.datasetIndex];
-                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                  return previousValue + currentValue;
-                });
-
-                var dataLabel = dataset.label[tooltipItem.index];
-                var currentValue = dataset.data[tooltipItem.index];
-                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
-                return `${dataLabel} (${currentValue}%)`;
-              }
-            }
-          },
-          plugins: {
-            datalabels: {
-              formatter: function(value) {
-                  return `${value}%`;
-              },
-              color: "#fff",
-              font: {
-                size: '10'
-              }
-            }
-          }
-        }
-    });
-  
 
   </script>
 
