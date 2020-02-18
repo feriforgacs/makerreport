@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>I ask for feedback from a smaller group of people. - Results 2019 - The Maker Report</title>
+  <meta property="description" content="6.9% of makers launch their products without asking for feedback from anyone, 61.8% are looking for feedback from some people every time, and 31.4% do it sometimes.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#53ffdb">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#53ffdb">
+  <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+  <meta name="theme-color" content="#53ffdb">
+
+  <meta property="og:title" content="I ask for feedback from a smaller group of people.">
+  <meta property="og:site_name" content="themakerreport.com">
+  <meta property="og:url" content="https://themakerreport.com/results/2019/share/feedback-group.html">
+  <meta property="og:description" content="6.9% of makers launch their products without asking for feedback from anyone, 61.8% are looking for feedback from some people every time, and 31.4% do it sometimes.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://themakerreport.com/assets/images/facebook-share-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@MakerReport">
+  <meta name="twitter:title" content="I ask for feedback from a smaller group of people.">
+  <meta name="twitter:description" content="6.9% of makers launch their products without asking for feedback from anyone, 61.8% are looking for feedback from some people every time, and 31.4% do it sometimes.">
+  <meta name="twitter:image" content="https://themakerreport.com/assets/images/twitter-share-image.png">
+  <meta name="twitter:image:alt" content="The Maker Report">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script src="https://config.metomic.io/config.js?id=prj:f28cae31-b23a-4d5a-b1ba-022ae05c3210" crossorigin charset="utf-8"></script>
+  <script src="https://consent-manager.metomic.io/embed.js" crossorigin charset="utf-8"></script>
+
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-67236740-13"></script>
+  <script type="text/x-metomic" data-micropolicy="statistics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-67236740-13');
+  </script>
+</head>
+<body class="subpage results">
+  <div id="container">
+    <div id="content">
+      <header>
+        <nav id="navigation">
+          <a href="/" class="logo">
+            <img src="/assets/images/logo-icon.svg" alt="The Maker Report">
+            The Maker Report
+          </a>
+        </nav>
+      </header>
+
+      <div id="result-hero">
+        <div id="result-hero__header">
+          <h3>Results</h3>
+          <h2>2019</h2>
+        </div><!-- end #result-hero__header -->
+      </div><!-- end #result-hero -->
+
+      <div class="result">
+        <div class="result__content result__content--share">
+          <div class="result__body result__body--share" id="result">
+            <h1>I ask for feedback from a smaller group of people.</h1>
+            <p><span class="num">6.9%</span> of makers launch their products without asking for feedback from anyone, <span class="num">61.8%</span> are looking for feedback from some people every time, and <span class="num">31.4%</span> do it sometimes.</p>
+
+            <div id="chart-container--ask-for-feedback">
+              <canvas class="chart" id="chart-ask-for-feedback"></canvas>
+            </div>
+
+            <div class="separator"></div>
+
+            <a href="/results/2019/" class="button button--primary">View the full report</a>
+          </div><!-- end #hero__body -->
+        </div>
+      </div>
+
+      <footer>
+        <nav id="footer__navigation">
+          <ul>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="javascript:window.Metomic('ConsentManager:show')">Manage Cookies</a></li>
+            <li><a href="https://github.com/feriforgacs/makerreport" target="_blank">Source of this website</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div><!-- end #content -->
+  </div><!-- end #container -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script>
+    /**
+     * Ask for feedback chart
+     */
+    var askForFeedbackChartCtx = document.getElementById('chart-ask-for-feedback').getContext('2d');
+    var askForFeedbackChart = new Chart(askForFeedbackChartCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Yes', 'Sometimes', 'No'],
+            datasets: [{
+                label: ['Yes', 'Sometimes', 'No'],
+                data: [61.8, 31.4, 6.9],
+                backgroundColor: [
+                  '#dc3912',
+                  '#ff9900',
+                  '#109618',
+                  '#990099',
+                  '#0099c6',
+                  '#dd4477',
+                  '#b82e2e',
+                  '#316395',
+                  '#994499',
+                  '#22aa99',
+                  '#aaaa11',
+                  '#663fef'
+                ],
+                borderColor: [
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff',
+                  '#ffffff'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options:{
+          responsive: true,
+          maintainAspectRatio: false,
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+
+                var dataLabel = dataset.label[tooltipItem.index];
+                var currentValue = dataset.data[tooltipItem.index];
+                // var precentage = Math.floor(((currentValue/total) * 100)+0.5);         
+                return `${dataLabel} (${currentValue}%)`;
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              formatter: function(value) {
+                  return `${value}%`;
+              },
+              color: "#fff",
+              font: {
+                size: '10'
+              }
+            }
+          }
+        }
+    });
+  
+  </script>
+</body>
+</html>
