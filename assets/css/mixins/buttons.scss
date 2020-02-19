@@ -25,6 +25,19 @@
     }
   }
 
+  &--inverse{
+    background: none;
+    border: 2px solid #663FEF;
+    color: #663FEF;
+    font-weight: bold;
+
+    &:hover{
+      background: #663FEF;
+      border: 2px solid #663FEF;
+      color: #fff;
+    }
+  }
+
   &--tweet{
     align-items: center;
     border: 2px solid #00aced;

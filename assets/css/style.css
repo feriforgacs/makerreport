@@ -191,6 +191,19 @@ template {
   color: #663FEF;
 }
 
+.button--inverse {
+  background: none;
+  border: 2px solid #663FEF;
+  color: #663FEF;
+  font-weight: bold;
+}
+
+.button--inverse:hover {
+  background: #663FEF;
+  border: 2px solid #663FEF;
+  color: #fff;
+}
+
 .button--tweet {
   -webkit-box-align: center;
       -ms-flex-align: center;
