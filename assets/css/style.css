@@ -201,7 +201,7 @@ template {
 .button--inverse:hover {
   background: #663FEF;
   border: 2px solid #663FEF;
-  color: #fff;
+  color: #fff !important;
 }
 
 .button--tweet {
