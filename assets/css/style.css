@@ -499,7 +499,7 @@ footer #footer__navigation ul li {
 footer #footer__navigation ul li a {
   color: #555;
   display: block;
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 40px;
   position: relative;
   text-decoration: none;
@@ -566,6 +566,10 @@ footer #footer__navigation ul li a:hover:after {
   background: #fff;
   font-size: .9rem;
   padding: 2rem;
+}
+
+.subpage #hero__body {
+  background: #fff;
 }
 
 .tweet-list {
@@ -956,5 +960,12 @@ blockquote {
 
 .chart--tall {
   min-height: 600px;
+}
+
+.avatar {
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  max-width: 60px;
 }
 /*# sourceMappingURL=style.css.map */

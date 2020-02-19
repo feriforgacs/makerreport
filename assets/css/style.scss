@@ -179,7 +179,7 @@ footer{
         a{
           color: #555;
           display: block;
-          font-size: .9rem;
+          font-size: .8rem;
           line-height: 40px;
           position: relative;
           text-decoration: none;
@@ -251,6 +251,12 @@ footer{
     background: #fff;
     font-size: .9rem;
     padding: 2rem;
+  }
+
+  #hero{
+    &__body{
+      background: #fff;
+    }
   }
 }
 
@@ -506,7 +512,7 @@ footer{
       }
     }
   }
-  
+
   &__share{
     display: flex;
     justify-content: space-between;
@@ -632,4 +638,11 @@ blockquote{
   &--tall{
     min-height: 600px;
   }
+}
+
+.avatar{
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  max-width: 60px;
 }
